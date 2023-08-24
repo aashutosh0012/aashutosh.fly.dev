@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-2co-vb@oh09op=o3z$c!r!#b2)q4h6gqie*%0ug#k*kmyupifs'
+# SECRET_KEY = '********'
 
 # Load environment variables from .env file
 from dotenv import load_dotenv
@@ -100,13 +100,13 @@ DATABASES = {
 
 # Fly Postgres Deployment inside app organization - on cloud prod
 # DATABASES = {
-#     'default': dj_database_url.parse('postgres://aashutosh:mPZlNBxjMbf64bT@top2.nearest.of.aashu-postgres.internal:5432/aashutosh?sslmode=disable', 
+#     'default': dj_database_url.parse('postgres://aashutosh:********@top2.nearest.of.aashu-postgres.internal:5432/aashutosh?sslmode=disable', 
 #         conn_max_age=600)
 # }
 
 # Fly Postgres Deployment local / outside app organization - on cloud
 # DATABASES = {
-#     'default': dj_database_url.parse('postgres://aashutosh:mPZlNBxjMbf64bT@149.248.216.128:5432/aashutosh?sslmode=disable', 
+#     'default': dj_database_url.parse('postgres://aashutosh:*********@149.248.216.128:5432/aashutosh?sslmode=disable', 
 #         conn_max_age=600)
 # }
 
@@ -124,7 +124,7 @@ DATABASES = {
 #         'ENGINE': 'django_cockroachdb',
 #         'NAME': 'bronze-civet-1481.defaultdb',
 #         'USER': 'aashutosh',
-#         'PASSWORD': 'Hn4uz6U1QpVC-snPw4t6Rg',
+#         'PASSWORD': '********',
 #         'HOST': 'bronze-civet-1481.7s5.cockroachlabs.cloud',
 #         'PORT': '26257',
 #         'OPTIONS': {
@@ -146,12 +146,12 @@ DATABASES = {
 '''
 Flyctl Postgres aashu-postgres attached to aashutosh.fly.dev 
 flyctl postgres attach --app aashutosh aashu-postgres
-DATABASE_URL=postgres://aashutosh:mPZlNBxjMbf64bT@top2.nearest.of.aashu-postgres.internal:5432/aashutosh?sslmode=disable
+DATABASE_URL=postgres://aashutosh:*********@top2.nearest.of.aashu-postgres.internal:5432/aashutosh?sslmode=disable
 aashu-postgres.internal=149.248.216.128
 '''
 # FLy Postgres DB aashu-postgres attached to aashu.fly.dev app
 # DATABASES = {
-#     'default': dj_database_url.parse('postgres://postgres:yMuTailSsIzS9RG@149.248.216.128:5432/aashu-postgres', 
+#     'default': dj_database_url.parse('postgres://postgres:*********@149.248.216.128:5432/aashu-postgres', 
 #         conn_max_age=600)
 #     }
 
